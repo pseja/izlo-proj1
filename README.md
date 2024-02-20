@@ -10,14 +10,14 @@ Díky znalostem nabytým během svého studia jste se rozhodl/a problém řešit
 
 ## Zadání
 
-_Instance_ problému se skládá z čísla $K$, $K > 0$, značícího počet křižovatek a seznamu � ulic délky $ K $, $ K>0 $. Čísla $0,1,…,K-1$ reprezentují křižovatky. Ulice je reprezentována dvojicí čísel ($z$,$k$), kde $z$ je její začátek a $k$ je její konec (platí tedy $0 \leq z < K$ a $0 \leq k < K$). Zadaný seznam ulic je tedy formy $S =(z_0,k_0),\ldots,(z_{U-1},k_{U-1})$. Pro jednoduchost je ulice vždy průjezdná pouze jedním směrem, je tedy identifikována svou počáteční a koncovou křižovatkou; mezi dvěmi křižovatkami dále existuje v jednom směru nejvýše jedna ulice.  
+_Instance_ problému se skládá z čísla $K$, $K > 0$, značícího počet křižovatek a seznamu � ulic délky $K$, $K>0$. Čísla $0,1,…,K-1$ reprezentují křižovatky. Ulice je reprezentována dvojicí čísel ($z$,$k$), kde $z$ je její začátek a $k$ je její konec (platí tedy $0 \leq z < K$ a $0 \leq k < K$). Zadaný seznam ulic je tedy formy $S =(z_0,k_0),\ldots,(z_{U-1},k_{U-1})$. Pro jednoduchost je ulice vždy průjezdná pouze jedním směrem, je tedy identifikována svou počáteční a koncovou křižovatkou; mezi dvěmi křižovatkami dále existuje v jednom směru nejvýše jedna ulice.  
 _Řešením_ problému je cesta, která prochází přes každou zadanou ulici právě jednou (začínat může kdekoliv).
 
 Vaším úkolem je vytvořit program, který pro instanci tohoto problému vygeneruje formuli, jejíž modely jsou právě řešeními dané instance. K dispozici již máte kostru (níže), která se stará o zpracování vstupu a generování formule ve formátu DIMACS (popis např. [zde](https://www.fit.vutbr.cz/study/courses/IZLO/public/sat/)).
 
 V rámci kostry již máte připraveno kódování problému do výrokových proměnných. Pro každou trojici čísel $i,z,k$, kde $0\leq i < U$, a $0 \leq z <K$, máme proměnnou $x_{i,z,k}$ s následující sémantikou:
 
-$ x_{i, z, k} = 1 \iff $ V $ i $-tém kroce cesty je zvolena ulice začínající v křižovatce $ z $ a končící v křižovatce $k$.  
+$x_{i, z, k} = 1 \iff$ V $i$-tém kroce cesty je zvolena ulice začínající v křižovatce $ z $ a končící v křižovatce $k$.  
   
 Vaším úkolem je doplnit kód tří funkcí v souboru `code/add_conditions.c`, které se starají o generování následujících podmínek:
 
