@@ -87,8 +87,8 @@ void streets_connected(CNF *formula, unsigned num_of_crossroads, unsigned num_of
                 {
                     for (int k2 = 0; k2 < num_of_crossroads; k2++)
                     {
-                        // Pokud konec první ulice není stejný jako začátek druhé ulice, \
-                        tak vytvoříme klauzuli a přidáme do ní literály
+                        // Pokud konec první ulice není stejný jako začátek druhé ulice,
+                        // tak vytvoříme klauzuli a přidáme do ní literály
                         if (k != j2)
                         {
                             Clause *new_clause = create_new_clause(formula);
