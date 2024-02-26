@@ -42,22 +42,22 @@ void at_most_one_street_for_each_step(CNF *formula, unsigned num_of_crossroads, 
     for (int i = 0; i < num_of_streets; i++)
     {
         // První ulice
-        for (int j = 0; j < num_of_crossroads; j++)
+        for (int z = 0; z < num_of_crossroads; z++)
         {
             for (int k = 0; k < num_of_crossroads; k++)
             {
                 // Druhá ulice
-                for (int j2 = 0; j2 < num_of_crossroads; j2++)
+                for (int z2 = 0; z2 < num_of_crossroads; z2++)
                 {
                     for (int k2 = 0; k2 < num_of_crossroads; k2++)
                     {
                         // Pokud jsou ulice různé, tak vytvoříme klauzuli a přidáme do ní literály
-                        if ((k != k2 || j != j2) && (j != k || j2 != k2))
+                        if ((k != k2 || z != z2) && (z != k || z2 != k2))
                         {
                             Clause *new_clause = create_new_clause(formula);
 
-                            add_literal_to_clause(new_clause, false, i, j, k);
-                            add_literal_to_clause(new_clause, false, i, j2, k2);
+                            add_literal_to_clause(new_clause, false, i, z, k);
+                            add_literal_to_clause(new_clause, false, i, z2, k2);
                         }
                     }
                 }
@@ -78,23 +78,23 @@ void streets_connected(CNF *formula, unsigned num_of_crossroads, unsigned num_of
     for (int i = 0; i < num_of_streets - 1; i++)
     {
         // První ulice
-        for (int j = 0; j < num_of_crossroads; j++)
+        for (int z = 0; z < num_of_crossroads; z++)
         {
             for (int k = 0; k < num_of_crossroads; k++)
             {
                 // Druhá ulice
-                for (int j2 = 0; j2 < num_of_crossroads; j2++)
+                for (int z2 = 0; z2 < num_of_crossroads; z2++)
                 {
                     for (int k2 = 0; k2 < num_of_crossroads; k2++)
                     {
                         // Pokud konec první ulice není stejný jako začátek druhé ulice,
                         // tak vytvoříme klauzuli a přidáme do ní literály
-                        if (k != j2)
+                        if (k != z2)
                         {
                             Clause *new_clause = create_new_clause(formula);
 
-                            add_literal_to_clause(new_clause, false, i, j, k);
-                            add_literal_to_clause(new_clause, false, i + 1, j2, k2);
+                            add_literal_to_clause(new_clause, false, i, z, k);
+                            add_literal_to_clause(new_clause, false, i + 1, z2, k2);
                         }
                     }
                 }
