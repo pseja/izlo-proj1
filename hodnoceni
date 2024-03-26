@@ -1,0 +1,37 @@
+Zakladní testy:
+  tests/sat/complex.in: OK
+  tests/sat/loop.in: OK
+  tests/sat/multiple_paths.in: OK
+  tests/sat/one_edge.in: OK
+  tests/sat/path_with_self_loops.in: OK
+  tests/sat/self_loop.in: OK
+  tests/sat/simple_path.in: OK
+  tests/unsat/diamond.in: OK
+  tests/unsat/loop_in_middle.in: OK
+  tests/unsat/many_random.in: OK
+  tests/unsat/same_dir.in: OK
+  tests/unsat/simple_path_disconnected.in: OK
+  tests/unsat/two_disconnected.in: OK
+
+Body: 4.0 (max 4)
+====================================================================
+
+Testy ekvivalence:
+  tests/sat/complex.in: OK
+  tests/sat/loop.in: OK
+  tests/sat/multiple_paths.in: OK
+  tests/sat/one_edge.in: OK
+  tests/sat/path_with_self_loops.in: OK
+  tests/sat/self_loop.in: OK
+  tests/sat/simple_path.in: OK
+  tests/unsat/diamond.in: OK
+  tests/unsat/loop_in_middle.in: OK
+  tests/unsat/many_random.in: OK
+  tests/unsat/same_dir.in: OK
+  tests/unsat/simple_path_disconnected.in: OK
+  tests/unsat/two_disconnected.in: OK
+
+Body: 4.0 (max 4)
+====================================================================
+
+Součet bodů: 8.0
