@@ -1,5 +1,8 @@
 # IZLO – Projekt 1: SAT solvery
 
+### Výsledné hodnocení
+(8/8)
+
 ## Úvod
 
 Váš strýček Pat Vás požádal o pomoc s řešením svého problému. Jako pošťák vstává brzy ráno a i se svým kocourem vyráží rozvážet poštu. Dokud byl ještě mladý a plný sil, příliš se netrápil s plánováním své trasy. Nyní, těsně před důchodem, si Vás jednoho dne zavolal s následující prosbou:
